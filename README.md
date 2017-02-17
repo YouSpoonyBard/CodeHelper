@@ -1,2 +1,2 @@
 # CodeHelper
-# For posting and reviewing other people's code
+# For posting, reviewing, and editing other people's code
