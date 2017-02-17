@@ -1,2 +1,2 @@
-# JavaHelper
-# For posting and reviewing other people's code from the java class
+# CodeHelper
+# For posting and reviewing other people's code
