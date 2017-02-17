@@ -1,0 +1,52 @@
+#Tim's Java code for Assingment 1
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+/**
+ * Created by TimGraham on 2/16/2017.
+ */
+public class VariableTest {
+    public static void main(String[] args) throws IOException {
+
+        String firstName;
+        String lastName;
+        int SalaryOfMonth;
+        int MonthsofSalary;
+        double YearlySalary;
+
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("What is your monthly salary? ");
+        SalaryOfMonth = keyboard.nextInt();
+
+
+        System.out.println("How many months have you been paid that? ");
+        MonthsofSalary = keyboard.nextInt();
+
+
+        keyboard.nextLine();
+
+        System.out.println("What is your first name");
+        firstName = keyboard.nextLine();
+        //System.out.println(filename);
+
+        System.out.println("What is your last name");
+        lastName = keyboard.nextLine();
+        //System.out.println(filename);
+
+        YearlySalary = SalaryOfMonth* MonthsofSalary;
+        YearlySalary = keyboard.nextInt();
+
+
+
+        FileWriter fwriter = new FileWriter("YearlySalary.txt", true);
+        PrintWriter outfile = new PrintWriter(fwriter);
+
+
+
+
+
+//ends file and says file written
+        outfile.close();
+        System.out.println("File written!");
