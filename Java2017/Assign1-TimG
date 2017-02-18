@@ -23,6 +23,7 @@ public class VariableTest {
         System.out.println("How many Customers do you have? ");
         numCustomers = keyboard.nextInt();
 
+        keyboard = new Scanner(System.in);
         System.out.println("What is the name of the file?");
         filename = keyboard.nextLine();
 
@@ -51,7 +52,7 @@ public class VariableTest {
             MonthsOfSalary = keyboard.nextInt();
 
             YearlySalary = SalaryOfMonth* MonthsOfSalary;
-            YearlySalary = keyboard.nextInt();
+
 
             /*System.out.println("Enter the name of friend " + (i+1) + ":");
             friendName = keyboard.nextLine();
