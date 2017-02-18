@@ -46,12 +46,15 @@ public class VariableTest {
 
             System.out.println("What is your monthly salary? ");
             SalaryOfMonth = keyboard.nextInt();
+            outfile.println(SalaryOfMonth);
 
 
             System.out.println("How many months have you been paid that? ");
             MonthsOfSalary = keyboard.nextInt();
+            outfile.println(MonthsOfSalary);
 
             YearlySalary = SalaryOfMonth* MonthsOfSalary;
+            outfile.println(YearlySalary);
 
 
             /*System.out.println("Enter the name of friend " + (i+1) + ":");
