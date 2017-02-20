@@ -1,4 +1,5 @@
 #Tim's Java code for Assingment 1
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,6 +18,8 @@ public class VariableTest {
         int MonthsOfSalary;
         int numCustomers;
         double YearlySalary;
+        char repeat;
+        String input;
 
 
         Scanner keyboard = new Scanner(System.in);
@@ -28,17 +31,17 @@ public class VariableTest {
         filename = keyboard.nextLine();
 
 
-
-
         FileWriter fwriter = new FileWriter("YearlySalary.txt", true);
-        PrintWriter outfile = new PrintWriter(fwriter);
+       PrintWriter outfile = new PrintWriter(fwriter);
 
         PrintWriter outFile = new PrintWriter(filename);
-        for (int i=0; i<=numCustomers;){
+        for (int i=0; i<=numCustomers; i++){
 
             System.out.println("Enter your first name " + ":");
             firstName = keyboard.nextLine();
             outfile.println(firstName);
+
+            keyboard.nextLine();
 
             System.out.println("Enter your last name " + ":");
             lastName = keyboard.nextLine();
@@ -57,21 +60,47 @@ public class VariableTest {
             outfile.println(YearlySalary);
 
 
-            /*System.out.println("Enter the name of friend " + (i+1) + ":");
-            friendName = keyboard.nextLine();
-            outfile.println(friendName);*/
-
-
 
         }
-
-
-
-
-
-//ends file and says file written
+        //ends file and says file written
         outfile.close();
         System.out.println("File written!");
+
+        do {
+            System.out.println("Would you like to view the file ");
+            System.out.println("Enter Y for yes and N for no");
+            input = keyboard.nextLine();
+            repeat = input.charAt(0);
+
+            keyboard = new Scanner(System.in);
+
+            System.out.println("Enter the name of the file ");
+            String fileName = keyboard.nextLine();
+
+            File file = new File(fileName);
+            //if(file.exists())
+            Scanner inputFile = new Scanner(file);
+            while(inputFile.hasNext()){
+                firstName = inputFile.nextLine();
+                lastName = inputFile.nextLine();
+                YearlySalary = Double.parseDouble(inputFile.nextLine());
+                System.out.println(firstName);
+                System.out.println(lastName);
+                System.out.println(YearlySalary);
+
+
+            }
+            inputFile.close();
+
+        }while (repeat == 'Y' || repeat=='y');
+
+
+
+
+
+
+
+
 
     }
 }
